@@ -21,6 +21,8 @@ social-email: luthrajaiji@gmail.com # add your Email address
 # Disqus
 discus-identifier: 
 
+excerpt_separator: "<!--excerpt-->"
+
 # Tracker
 analytics: # Google Analytics
 

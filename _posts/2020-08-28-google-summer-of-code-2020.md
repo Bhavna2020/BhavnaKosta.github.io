@@ -9,6 +9,8 @@ tags:
 
 A summary of work done - Google Summer of Code 2020
 
+<!--excerpt-->
+
 ## [Project](https://summerofcode.withgoogle.com/projects/#5651188063666176)
 
 ### Title - General Printer Application SDK.
