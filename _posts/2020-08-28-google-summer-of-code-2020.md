@@ -1,22 +1,24 @@
 ---
 layout: post
-title: Google Summer of Code 2020
-date: 2020-08-28
-description: A summary of work done in Google Summer of Code 2020. 
+title: Google Summer of Code 2021
+date: 2021-08-21
+description: A summary of work done in Google Summer of Code 2021. 
 fig-caption: 
 tags: 
 ---
 
-A summary of work done - Google Summer of Code 2020
+Google Summer of Code 2021
 
 <!--excerpt-->
 
 ## [Project](https://summerofcode.withgoogle.com/projects/#5651188063666176)
 
-### Title - General Printer Application SDK.
+### Title - Printer Setup Tools and Scanning in PAPPL.
 
 MENTORS -
-[Ira McDonald, Till Kamppeter, Dheeraj, Michael Sweet, Danny Brennan]
+[Ira McDonald, Till Kamppeter, Michael Sweet, Jai Luthra]
+
+## Introduction
 
 I have contributed to development of [PAPPL](https://github.com/michaelrsweet/pappl) (Printer Application Framework).
 
@@ -24,96 +26,35 @@ I have contributed to development of [PAPPL](https://github.com/michaelrsweet/pa
 Printer Applications, which are the recommended replacement for
 printer drivers.*
 
-I have also developed the [HP Printer Application](https://github.com/michaelrsweet/hp-printer-app)
+-------------------------------------------------------------------------------------------
+## Printer Setup Tools
+
+1. Extend the drivers subcommand to also show the supported device-ids.
+2. Add option to check whether a given printer is supported.
+
+- [Extend drivers subcommand to also show supported device IDs](https://github.com/michaelrsweet/pappl/pull/170) 
+
+- [Add device-id option to drivers](https://github.com/michaelrsweet/pappl/pull/174)
 
 -------------------------------------------------------------------------------------------
-## DNS-SD Discovery Support in PAPPL
+## Scanning
 
-Support for printer discovery and lookup using mDNS/DNS-SD(for pdl-datastream) (AppSocket/JetDirect).
+1. Implemented the object and structure for scanners.
+2. Add header files with public and private API.
+3. Add scanner.c file that provides the scanner object constructor and destructor.
+4. Add scanner-accessors.c file that provides the scanner object accessor (get/set) functions.
+5. Add scanner-driver.c file that provides the scan driver interfaces and attributes.
+6. Add scanner-webif.c file that provides scan-specific web pages.
+7. Add papplPrinterSetScanner API to set the scanner associated with a printer.
 
-[Related Issue](https://github.com/michaelrsweet/pappl/issues/18) - Closed
 
-Closed by:
+- [Add scanner object and header files](https://github.com/michaelrsweet/pappl/pull/172)
 
-- [Pull Request 1](https://github.com/michaelrsweet/pappl/pull/24) - Merged
+- [Add scanner.c and scanner-accessors.c files](https://github.com/michaelrsweet/pappl/pull/175)
 
-- [Pull Request 2](https://github.com/michaelrsweet/pappl/pull/29) - Merged
+- [Add scanner-webif.c](https://github.com/michaelrsweet/pappl/pull/177)
 
+Finally, I have merged all my commits for the Scanning part and pushed in one PR.
+
+- [Scann](https://github.com/michaelrsweet/pappl/pull/180)
 -------------------------------------------------------------------------------------------
-## SNMP Discovery Support in PAPPL
-
-Support for printer discovery and lookup using SNMP.
-
-[Related Issue](https://github.com/michaelrsweet/pappl/issues/17) - Closed
-
-Closed by:
-
-- [Pull Request](https://github.com/michaelrsweet/pappl/pull/31) - Merged
-
--------------------------------------------------------------------------------------------
-## papplMainloop in PAPPL
-
-Standard command-line interface for PAPPL-based printer applications.
-
-[Related Issue](https://github.com/michaelrsweet/pappl/issues/19) - Closed
-
-Closed by:
-
-- [Pull Request](https://github.com/michaelrsweet/pappl/pull/26) - Merged
-
--------------------------------------------------------------------------------------------
-## Porting Example of CUPS rastertohp in PAPPL
-
-[HP Printer app](https://github.com/michaelrsweet/hp-printer-app) - Example printer application for the CUPS rastertohp filter and corresponding PPD files (laserjet.ppd, deskjet.ppd, and generpcl.ppd).
-
-[Related Issue](https://github.com/michaelrsweet/pappl/issues/16) - Closed
-
-Closed by:
-
-- [Pull Request](https://github.com/michaelrsweet/pappl/pull/32) - Merged
-
--------------------------------------------------------------------------------------------
-## Snapcraft and systemd support in HP Printer Application
-
-Snapcraft packaging template and systemd service support.
-
-[Related Issue](https://github.com/michaelrsweet/pappl/issues/16) - Closed
-
-Closed by:
-
-- [Pull Request](https://github.com/michaelrsweet/hp-printer-app/pull/1) - Merged
-
--------------------------------------------------------------------------------------------
-## Documentation and Design Notes - HP Printer Application
-
-Documentation for converting PCL driver to a Printer Application.
-
-[Related Issue](https://github.com/michaelrsweet/pappl/issues/16) - Closed
-
-Closed by:
-
- - [Pull Request](https://github.com/michaelrsweet/hp-printer-app/pull/2) - Merged
-
--------------------------------------------------------------------------------------------
-## Device Auto-Setup in PAPPL
-
-Auto addition of nearby devices supported by a Printer Application.
-
-[Pull Request](https://github.com/michaelrsweet/pappl/pull/36) - Open
-
--------------------------------------------------------------------------------------------
-## Move rastertops filter functionality to filter function
-
-Move the core functionality of rastertops filter into libcupsfilters so that it can be called directly.
-
-[Pull Request](https://github.com/OpenPrinting/cups-filters/pull/282) - Merged
-
--------------------------------------------------------------------------------------------
-## Move rastertopdf filter functionality to filter function
-
-Move the core functionality of rastertopdf filter into libcupsfilters so that it can be called directly.
-
-[Pull Request](https://github.com/OpenPrinting/cups-filters/pull/288) - Merged
-
-[Pull Request](https://github.com/OpenPrinting/cups-filters/pull/289) - Merged
-
