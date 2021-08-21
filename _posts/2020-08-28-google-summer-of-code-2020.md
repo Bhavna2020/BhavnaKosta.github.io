@@ -1,17 +1,6 @@
----
-layout: post
-title: Google Summer of Code 2021
-date: 2021-08-21
-description: A summary of work done in Google Summer of Code 2021. 
-fig-caption: 
-tags: 
----
-
-Google Summer of Code 2021
+## Google Summer of Code 2021
 
 <!--excerpt-->
-
-## [Project](https://summerofcode.withgoogle.com/projects/#5651188063666176)
 
 ### Title - Printer Setup Tools and Scanning in PAPPL.
 
